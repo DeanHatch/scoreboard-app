@@ -1,0 +1,8 @@
+display-competition.component stuff  
+  <h2 *ngIf="competition">
+    {{ competition.name }} {{competition.sport | titlecase}} {{competition.variety | titlecase}}
+  </h2>
+<div *ngIf="competition" class="name">
+         <display-top-navigation [competition]="competition" (topichaschanged)=onTopic($event)></display-top-navigation>
+         <display-site-content [competition]="competition" [topic]="toptopic"></display-site-content>
+	 </div>

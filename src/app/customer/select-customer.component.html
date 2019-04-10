@@ -1,0 +1,13 @@
+<p> Select Customer stuff </p>
+  Select Customer works! 
+  <p> customerRoutes: {{ customerRoutes }} </p>
+  <p> allMyCustomers: {{ allMyCustomers }} </p>
+  
+  <i>Select a Customer from the list</i>
+<select name="customer" > 
+  <option value="0">Select one...</option>
+  <option *ngFor="let customer of allMyCustomers"
+               id="{{customer.id}}"
+               value="{{customer.id}}">
+        {{customer.email}} </option>
+</select>

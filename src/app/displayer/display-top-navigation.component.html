@@ -1,0 +1,20 @@
+
+<div class="navigation-top" style="position:relative">
+  <div class="wrap">
+    <div id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+      <div class="menu-top-menu-container">
+        <ul id="top-menu" >
+          <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
+            <a [routerLink]="['group',':gid','standings']">Standings</a></li>
+          <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+            <a [routerLink]="['group','schedule']">Schedule</a></li>
+          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"
+	    *ngIf="competition.scoreable" >
+            <a [routerLink]="['group','scores']">Scores</a></li>
+          <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21">
+            <a [routerLink]="['group','bracket']">Bracket</a></li>
+        </ul>
+      </div>
+    </div><!-- #site-navigation -->
+  </div><!-- .wrap -->
+</div><!-- .navigation-top -->

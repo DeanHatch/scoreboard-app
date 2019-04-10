@@ -1,0 +1,9 @@
+<h5>Select a Competition</h5>
+<select name="competition" on-change="selectComp($event)"> <!-- shortened name -->
+  <option value="0">Select one...</option>
+  <option *ngFor="let competition of competitions"
+               id="{{competition._id}}"
+               value="{{competition._id}}"
+	       [class.selected]="competition ===selectedCompetition">
+        {{competition.name}} {{competition.sport | titlecase}} {{competition.variety | titlecase}}</option>
+</select>

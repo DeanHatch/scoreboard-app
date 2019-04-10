@@ -1,0 +1,25 @@
+<header id="masthead" class="site-header" role="banner">
+  <div style="text-align:center">
+    <h1>
+    Welcome to {{ title }}!!
+    </h1>
+    <img alt="Online-Scoreboard Banner" src="assets/netting.jpg">
+  </div>
+</header><!-- #masthead -->
+  
+  <h2 *ngIf="competition">
+    {{ competition.name }} {{competition.sport | titlecase}} {{competition.variety | titlecase}}
+  </h2>
+  <h3 *ngIf="competition">
+    {{ competition.grouping.name }}
+    {{ myCurrentgrouping() }} x {{ currentgroupingService.currentgrouping.name }}
+  </h3>
+  <h4> {{ deanostring }} </h4>
+  
+        <ul *ngIf="router" >
+          <li *ngFor="let cnf of router.config" >  Path: {{ cnf.path }} &nbsp;&nbsp; Component: {{ cnf.component }} </li>
+        </ul>
+<div *ngIf="competition" class="name">
+         <display-top-navigation [competition]="competition" (topichaschanged)=onTopic($event)></display-top-navigation>
+         <display-site-content [competition]="competition" [topic]="toptopic"></display-site-content>
+	 </div>
