@@ -23,14 +23,14 @@ export class CompetitionService {
   ) { }
 
   getCompetitions() {
-    return of(this.competitions)
-    //return this.http.get<Competition[]>('http://localhost:3000/competitions',
-	//  { responseType: "json" } );
+    //return of(this.competitions)
+    return this.http.get<Competition[]>('http://localhost:3000/competitions',
+	  { responseType: "json" } );
   }
 
   getCompetition(c_id) {
-    return of(this.competitions.find(c => c._id == c_id));
-    //return this.http.get<Competition>("http://localhost:3000/competitions/"+c_id,
-	//  { responseType: "json" } );
+    //return of(this.competitions.find(c => c._id == c_id));
+    return this.http.get<Competition>("http://localhost:3000/competitions/"+c_id,
+	  { responseType: "json" } );
   }
 }
