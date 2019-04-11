@@ -18,7 +18,8 @@ export class CompetitionListComponent implements OnInit {
   constructor(private service: CompetitionService) { }
 
   ngOnInit() {
-    this.service.getCompetitions()
+       // Get All Competitions, across All Organizations
+    this.service.getAllCompetitions()
 	 .subscribe((data: Competition[]) => this.competitions = data)
 	  ;
   }
