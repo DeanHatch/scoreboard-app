@@ -4,5 +4,5 @@ display-competition.component stuff
   </h2>
 <div *ngIf="competition" class="name">
          <display-top-navigation [competition]="competition" (topichaschanged)=onTopic($event)></display-top-navigation>
-         <display-site-content [competition]="competition" [topic]="toptopic"></display-site-content>
+         <display-site-content [competition]="competition" [groupings]="groupings" [topic]="toptopic"></display-site-content>
 	 </div>

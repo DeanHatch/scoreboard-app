@@ -11,21 +11,20 @@ import { DisplayCompetitionComponent } from './display-competition.component';
 import { DisplaySelectCompetitionComponent } from './display-select-competition.component';
 
 const displayRoutes: Routes = [
-//  {path: 'display/:cid', 
-//    component: DisplayCompetitionComponent,
-//    children: [
-//                    {path: 'group/:gid/standings', component: DisplayCompetitionComponent},
-//		    {path: 'group/:gid/schedule', component: DisplayCompetitionComponent},
-//		    {path: 'group/:gid/scores', component: DisplayCompetitionComponent},
-//		    {path: 'group/:gid/bracket', component: DisplayCompetitionComponent},
-//		    {path: 'group/:gid', component: DisplayCompetitionComponent},
-//		    {path: 'team/:tid', component: DisplayCompetitionComponent}
-//		    ]},
-//  {path: 'display', component: DisplaySelectCompetitionComponent}
   {path: '',
     component: DisplayComponent,
     children: [ {path: '', component: DisplaySelectCompetitionComponent},
-                    {path: ':cid', component: DisplayCompetitionComponent}
+                    {path: ':cid', 
+		      component: DisplayCompetitionComponent,
+		      children: [
+		          {path: 'group/:gid/standings', component: DisplayCompetitionComponent},
+ 		          {path: 'group/:gid/schedule', component: DisplayCompetitionComponent},
+			  {path: 'group/:gid/scores', component: DisplayCompetitionComponent},
+			  {path: 'group/:gid/bracket', component: DisplayCompetitionComponent},
+			  {path: 'group/:gid', component: DisplayCompetitionComponent},
+			  {path: 'team/:tid', component: DisplayCompetitionComponent}
+		      ]
+		      }
                 ] },
   {path: '**', component: DisplayComponent}
 ];

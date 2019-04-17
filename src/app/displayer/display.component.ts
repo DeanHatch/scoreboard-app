@@ -11,6 +11,7 @@ export class DisplayComponent {
   title = 'Online-Scoreboard.Net for You';
   urlstring: string;
   
+  
   constructor(private activatedRoute: ActivatedRoute) { }
 		    
   ngOnInit() {

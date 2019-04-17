@@ -8,6 +8,7 @@ import { DisplayRoutingModule } from './display-routing.module';
 import { DisplayComponent } from './display.component';
 import { DisplayCompetitionComponent } from './display-competition.component';
 import { DisplaySelectCompetitionComponent } from './display-select-competition.component';
+import { OrganizationListComponent } from '../organization-list.component';
 import { CompetitionListComponent } from '../competition-list.component';
 import { DisplayTopNavigationComponent } from './display-top-navigation.component';
 import { DisplaySiteContentComponent } from './display-site-content.component';
@@ -16,6 +17,7 @@ import { DisplaySiteContentComponent } from './display-site-content.component';
   declarations: [
     DisplayComponent,
     DisplaySelectCompetitionComponent,
+    OrganizationListComponent,
     CompetitionListComponent,
     DisplayCompetitionComponent,
     DisplayTopNavigationComponent,

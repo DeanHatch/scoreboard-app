@@ -16,15 +16,19 @@ export class GroupingService {
 	private http: HttpClient
   ) { }
 
-  getGroupingsFor(comp_id) {
-    //return this.groupings;
-    return this.http.get<Grouping[]>('http://localhost:3000/competitions/{{comp_id}}/groupings',
+  urlFrom(arr) {
+    arr.unshift("http://localhost:3000");
+    return arr.join("/");
+  }
+  
+  getGroupingsFor(comp) {
+    return this.http.get<Grouping[]>(this.urlFrom(["competitions",comp.id,"groupings"]),
 	  { responseType: "json" } );
   }
 
-  getGroupingFor(comp_id, grp_id) {
+  getGroupingFor(comp, grp_id) {
     //return this.groupings[0];
-    return this.http.get<Grouping>('http://localhost:3000/competitions/{{comp_id}}/groupings/{{grp_id}}',
+    return this.http.get<Grouping>(this.urlFrom(["competitions",comp.id,"groupings",grp_id]),
 	  { responseType: "json" } );
   }
 }

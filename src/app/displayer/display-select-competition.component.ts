@@ -12,6 +12,9 @@ export class DisplaySelectCompetitionComponent {
   
   constructor(private router: Router) { }
 
+  selectTheOrganization(o_id) {
+  }
+
   selectTheCompetition(c_id) {
     this.router.navigate(['display/'+c_id]);
   }

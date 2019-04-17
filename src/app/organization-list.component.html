@@ -1,0 +1,9 @@
+<h5>Select an Organization</h5>
+<select name="organization" on-change="selectOrg($event)"> <!-- shortened name -->
+  <option value="0">Select one...</option>
+  <option *ngFor="let organization of organizations"
+               id="{{organization._id}}"
+               value="{{organization._id}}"
+	       [class.selected]="organization ===selectedOrganization">
+        {{organization.name}}</option>
+</select>
