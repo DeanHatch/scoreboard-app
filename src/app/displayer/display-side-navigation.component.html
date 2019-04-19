@@ -1,0 +1,7 @@
+<div *ngFor="let grouping of groupings" >
+<ul *ngIf="grouping.parent_id == this.xyzzy">
+      <a [routerLink]="['group',grouping.id,'standings']">{{ swizzle(grouping) }}</a> 
+<display-side-navigation [groupings]="groupings" [xyzzy]="grouping.id">
+   </display-side-navigation>
+</ul>
+</div>

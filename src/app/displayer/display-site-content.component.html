@@ -1,18 +1,4 @@
-  <div class="site-contain">
-  	<div class="site" id="primary">
-	<br/>
          <!-- display-grouping-standings  *ngIf="topic=='standings'"></display-grouping-standings>
          <display-grouping-schedule  *ngIf="topic=='schedule'"></display-grouping-schedule>
          <display-grouping-scores  *ngIf="topic=='scores'"></display-grouping-scores>
          <display-grouping-bracket  *ngIf="topic=='bracket'"></display-grouping-bracket -->
-	</div> <!-- #primary -->
-   <div class="site" id="secondary">
-   <ul> 
-  <li>Groupings will go here...</li>
-  <li *ngFor="let grouping of groupings">
-        {{grouping.name}} </li>
-</ul>
-   <p>The current Topic is {{ topic }}
-   <!-- display-grouping-navigation [grouping]="competition.grouping"></display-grouping-navigation -->
-   </div>  <!-- #secondary -->
-  </div>

@@ -18,6 +18,13 @@ export class DisplaySiteContentComponent {
   
   constructor() { }
   
+  swizzle(which) {
+    return which.name+"("+which.id+")"
+  }
+  
+  topgroupings() {
+    return this.groupings //.filter(grp => grp.parent_id == null)
+  }
   
   top_grouping_name() {
     let g: Grouping;

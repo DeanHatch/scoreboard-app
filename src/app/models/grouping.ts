@@ -8,6 +8,7 @@ export class Grouping {
   scheduleable: boolean
   standingsable: boolean
   bracketable: boolean
+  parent_id: number
 //  subgroupings: []
   subgroupings: Array<Grouping>
   teams: Array<Team>

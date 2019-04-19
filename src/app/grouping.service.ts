@@ -8,7 +8,7 @@ import { Grouping } from './models/grouping';
 export class GroupingService {
   private groupings: Grouping[] =
 	[ { _id: 1, name: 'DEF Grouping', variety: 'Grouping Variety',
- 	  scheduleable: true, standingsable: true, bracketable: true,
+ 	  scheduleable: true, standingsable: true, bracketable: true, parent_id: null,
           subgroupings: [], teams: []}
 	];
 

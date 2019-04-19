@@ -11,6 +11,7 @@ import { Grouping } from '../models/grouping';
 import { GroupingService } from '../grouping.service';
 
 import { DisplayTopNavigationComponent } from './display-top-navigation.component';
+import { DisplaySideNavigationComponent } from './display-side-navigation.component';
 import { DisplaySiteContentComponent } from './display-site-content.component';
 
 // Add Two Services: one for maintaining current Topic and one for Current Grouping
@@ -32,7 +33,7 @@ export class DisplayCompetitionComponent {
   currenttopic: string;
   cid: string;
   dummyGrouping: Grouping={ _id: 5, name: 'QQQ Grouping', variety: 'Varietal',
- 	  scheduleable: true, standingsable: true, bracketable: true,
+ 	  scheduleable: true, standingsable: true, bracketable: true, parent_id: null,
           subgroupings: [], teams: []};
   
   constructor(private compService: CompetitionService,

@@ -11,6 +11,7 @@ import { DisplaySelectCompetitionComponent } from './display-select-competition.
 import { OrganizationListComponent } from '../organization-list.component';
 import { CompetitionListComponent } from '../competition-list.component';
 import { DisplayTopNavigationComponent } from './display-top-navigation.component';
+import { DisplaySideNavigationComponent } from './display-side-navigation.component';
 import { DisplaySiteContentComponent } from './display-site-content.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { DisplaySiteContentComponent } from './display-site-content.component';
     CompetitionListComponent,
     DisplayCompetitionComponent,
     DisplayTopNavigationComponent,
+    DisplaySideNavigationComponent,
     DisplaySiteContentComponent,
   ],
   imports: [

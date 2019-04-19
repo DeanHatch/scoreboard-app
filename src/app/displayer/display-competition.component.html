@@ -1,8 +1,18 @@
 display-competition.component stuff  
-  <h2 *ngIf="competition">
+<h2 *ngIf="competition">
     {{ competition.name }} {{competition.sport | titlecase}} {{competition.variety | titlecase}}
-  </h2>
+</h2>
 <div *ngIf="competition" class="name">
-         <display-top-navigation [competition]="competition" (topichaschanged)=onTopic($event)></display-top-navigation>
-         <display-site-content [competition]="competition" [groupings]="groupings" [topic]="toptopic"></display-site-content>
-	 </div>
+  <display-top-navigation [competition]="competition" (topichaschanged)=onTopic($event)></display-top-navigation>
+  <div class="site-contain">
+    <div class="has-sidebar">
+      <div class="site" id="primary">
+        <display-site-content [competition]="competition" [groupings]="groupings" [topic]="toptopic"></display-site-content>
+      </div> <!-- #primary -->
+      <div class="site" id="secondary">
+         <!-- display-side-navigation [groupings]="groupings" [xyzzy]="'Boink'"></display-side-navigation -->
+         <display-side-navigation [groupings]="groupings"></display-side-navigation>
+      </div>  <!-- #secondary -->
+    </div>  <!-- #has-sidebar -->
+  </div>  <!-- #site-contain -->
+</div>   <!-- #name -->
