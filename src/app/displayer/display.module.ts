@@ -13,6 +13,7 @@ import { CompetitionListComponent } from '../competition-list.component';
 import { DisplayTopNavigationComponent } from './display-top-navigation.component';
 import { DisplaySideNavigationComponent } from './display-side-navigation.component';
 import { DisplaySiteContentComponent } from './display-site-content.component';
+import { DisplayGroupingStandingsComponent } from './display-grouping-standings.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DisplaySiteContentComponent } from './display-site-content.component';
     DisplayTopNavigationComponent,
     DisplaySideNavigationComponent,
     DisplaySiteContentComponent,
+    DisplayGroupingStandingsComponent,
   ],
   imports: [
     //BrowserModule,
