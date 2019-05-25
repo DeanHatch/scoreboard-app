@@ -10,7 +10,11 @@ const routes: Routes = [
   {path: 'manage',
             loadChildren: './manager/manage.module#ManageModule'},
   {path: 'score',
-            loadChildren: './scorer/score.module#ScoreModule'}
+            loadChildren: './scorer/score.module#ScoreModule'},
+  { path: '',
+    redirectTo: '/display',
+    pathMatch: 'full'
+  },
     ];
 
 @NgModule({

@@ -24,12 +24,8 @@ export class CompetitionListComponent implements OnInit {
 	  ;
   }
 
-  selectComp(event: any) { 
-    this.selectionOccurred.emit(event.target.value);
-    }
-
-  selectCompetition(competition: Competition) { 
-    this.selectedCompetition = competition; 
-    this.selectionHappened.emit(competition);
+  selectCompetition(c_id: any) { 
+    this.service.getCompetition(c_id).subscribe(selComp=>this.selectionHappened.emit(selComp)); 
+    ;
     }
 }

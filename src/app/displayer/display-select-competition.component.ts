@@ -15,7 +15,7 @@ export class DisplaySelectCompetitionComponent {
   selectTheOrganization(o_id) {
   }
 
-  selectTheCompetition(c_id) {
-    this.router.navigate(['display/'+c_id]);
+  selectTheCompetition(comp) {
+    this.router.navigate(['display/'+comp.id]);
   }
 }
